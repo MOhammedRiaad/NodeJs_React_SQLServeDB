@@ -79,7 +79,7 @@ class App extends Component {
 
       const UserData = JSON.parse(response.express);
       console.log(UserData["recordset"]["0"]);
-this.setState({UserInfo :UserData["recordset"]["0"] })
+      this.setState({UserInfo :UserData["recordset"]["0"] })
                   console.log(this.state.UserInfo)
       divView.append(this.state.UserInfo)
               }
