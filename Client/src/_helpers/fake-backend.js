@@ -16,7 +16,7 @@ export function configureFakeBackend() {
     //     { id: 2, username: 'user', password: 'user', firstName: 'Normal', lastName: 'User', role: Role.User }
     // ];
 
-    //get users from server and pass them to the local users array 
+    //get users from server and pass them to the local users array
     fetch('http://localhost:5000/api/users',requestOptions).then(handleResponse).then(userss=>{
         const UsersData = JSON.parse(userss.express)
         let userinfo = UsersData["recordset"];

@@ -1,6 +1,5 @@
-# react-role-authorization-example
+# react-role-based-authorization-example
 
-React - Role Based Authorization using SQL Server BackEnd and  Node as Server 
+React - Role Based Authorization Tutorial & Example
 
-## to start the react server run npm install to get all required filles . 
- -- then run npm start 
+To see a demo and further details go to http://jasonwatmore.com/post/2019/02/01/react-role-based-authorization-tutorial-with-example
