@@ -5,6 +5,9 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 5000;
 const pino = require('express-pino-logger')();
+var cors = require('cors')
+
+app.use(cors()) // Use this after the variable declaration
 
 app.use(pino);
 
@@ -142,6 +145,27 @@ let requset = new sql.Request(conn);
 
       
         });
+
+        app.get('/api/users',(req,res)=>{
+
+            conn.connect(function (err){
+                if (err){
+                    console.dir(err)
+                    conn.close()
+                    return 
+                }
+
+                requset.execute('getalluser',(err,result)=>{
+                    if(err){
+                        console.dir(err)
+                        conn.close()
+                    }
+                    res.send({express:JSON.stringify(result)})
+
+                    conn.close()
+                })
+            })
+        })
 
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
