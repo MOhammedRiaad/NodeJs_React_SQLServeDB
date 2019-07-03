@@ -61,7 +61,7 @@ export function configureFakeBackend() {
 
                     // only allow normal users access to their own record
                     const currentUser = users.find(x => x.RoleName === role);
-                    if (id !== currentUser.id && role !== Role.Admin) return unauthorised();
+                    //if (id !== currentUser.id && role !== Role.Admin) return unauthorised();
 
                     const user = users.find(x => x.id === id);
                     return ok(user);

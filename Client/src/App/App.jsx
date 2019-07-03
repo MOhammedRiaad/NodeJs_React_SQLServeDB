@@ -7,6 +7,7 @@ import { PrivateRoute } from '@/_components';
 import { HomePage } from '@/HomePage';
 import { AdminPage } from '@/AdminPage';
 import { LoginPage } from '@/LoginPage';
+import { Tree } from '@/Tree';
 
 class App extends React.Component {
     constructor(props) {
@@ -39,16 +40,18 @@ class App extends React.Component {
                         <nav className="navbar navbar-expand navbar-dark bg-dark">
                             <div className="navbar-nav">
                                 <Link to="/" className="nav-item nav-link">Home</Link>
+                                <Link to="/Tree" className="nav-item nav-link">Tree</Link>
                                 {isAdmin && <Link to="/admin" className="nav-item nav-link">Admin</Link>}
                                 <a onClick={this.logout} className="nav-item nav-link">Logout</a>
                             </div>
                         </nav>
                     }
-                    <div className="jumbotron">
+                    <div className="jumbotron ">
                         <div className="container">
                             <div className="row">
                                 <div className="col-md-6 offset-md-3">
                                     <PrivateRoute exact path="/" component={HomePage} />
+                                    <PrivateRoute exact path="/Tree" component={Tree} />
                                     <PrivateRoute path="/admin" roles={[Role.Admin]} component={AdminPage} />
                                     <Route path="/login" component={LoginPage} />
                                 </div>

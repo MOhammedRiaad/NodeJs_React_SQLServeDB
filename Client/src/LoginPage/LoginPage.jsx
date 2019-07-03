@@ -1,6 +1,7 @@
 import React from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+// import './Login.css'
 
 import { authenticationService } from '@/_services';
 
@@ -16,7 +17,7 @@ class LoginPage extends React.Component {
 
     render() {
         return (
-            <div>
+            <div >
                 <div className="alert alert-info">
                     <strong>Normal User</strong> - U: user P: user<br />
                     <strong>Administrator</strong> - U: admin P: admin

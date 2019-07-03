@@ -23,6 +23,7 @@
     "pino-colada": "^1.4.4"
   },
   "scripts": {
-    "server": "node-env-run server --exec nodemon "
+    "server": "node-env-run server --exec nodemon ",
+     "client": "cd .. && cd Client && npm start"
   }
 }

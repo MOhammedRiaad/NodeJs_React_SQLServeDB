@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {Tree}  from '../Tree' ;
 import { userService, authenticationService } from '@/_services';
 
 class HomePage extends React.Component {
@@ -33,6 +33,7 @@ class HomePage extends React.Component {
                         </ul>
                     }
                 </div>
+                <Tree/>
             </div>
         );
     }
